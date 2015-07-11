@@ -40,19 +40,39 @@ body{
 }
 
 
-/*------------------------FORM FIELD ---------------------*/
-input.form-field:focus {
-      background: rgb(159, 174, 173);
-        border: 0;
-          outline: none;
+
+
+/*------------------------SUBMIT BUTTON---------------------*/
+
+.submit-button {
+    background: #4f534f;
+    color: white;
+    display: inline;
+    padding: 5px 10px;
+    float: right;
+    margin-top: -20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.submit-button:hover{
+    background: #C7EAC7;
+
 }
 
-.form-label{
-    text-transform: uppercase;
-    padding: 10px 0px;
-}
+
+/*------------------------SUBMIT BUTTON---------------------*/
+
+
+
+/*------------------------FORM FIELD ---------------------*/
+
 
 input.form-field{
+    /*input.form-field:not(:focus){*/
+    /* animation:  form-field-focused  1.5s ease-in 1 backwards;  */
+
     font-size: 1.8em;
     padding: 0.15em 0.25em;
     width: 90%;
@@ -61,6 +81,34 @@ input.form-field{
     -webkit-appearance: none;
 }
 
+
+input.form-field:focus {
+      border: 0;
+      outline: none;
+
+        animation:  form-field-focused  0.35s ease-in 1 forwards; /* IE */
+}
+
+@keyframes form-field-focused{
+    from {
+        background-color: #EFEFEF;
+
+    }
+
+    to {
+      background: rgb(159, 174, 173);
+
+    }
+
+}
+
+.form-label{
+    text-transform: uppercase;
+    padding: 10px 0px;
+    
+
+
+}
 .form-entry{
     margin-bottom: 30px;
     width: 90%;;
