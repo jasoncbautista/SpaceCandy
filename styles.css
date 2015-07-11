@@ -136,7 +136,7 @@ body{
     background: #4f534f;
     color: white;
     display: inline;
-    padding: 5px 10px;
+    padding: 5px 30px;
     float: right;
     margin-top: -20px;
     margin-right: 10px;
@@ -144,6 +144,7 @@ body{
     cursor: pointer;
     opacity: 0;
     animation: simple-fade 1.5s ease  0.5s 1 forwards;
+    text-transform: uppercase;
 }
 .submit-button:hover{
     background: #C7EAC7;
@@ -171,7 +172,7 @@ body{
 /*------------------------FORM FIELD ---------------------*/
 
 
-input.form-field{
+.form-field{
     /*input.form-field:not(:focus){*/
     /* animation:  form-field-focused  1.5s ease-in 1 backwards;  */
 
@@ -184,7 +185,11 @@ input.form-field{
 }
 
 
-input.form-field:focus {
+textarea.form-field{
+    height: 80%;
+
+}
+.form-field:focus {
       border: 0;
       outline: none;
 
@@ -245,7 +250,7 @@ input.form-field:focus {
 
 
 .form-description {
-    height: 300px;
+    height: 350px;
     
 }
 
