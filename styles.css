@@ -40,19 +40,31 @@ body{
 }
 
 
-/*------------------------CUBE ---------------------*/
 
-
-.wrap {
-    perspective: 400px;
-    perspective-origin: 50% 50px;
-    top: 30%;
+.upload-top {
+    top: 10%;
     margin: 0px auto;
     position: relative;
     left: 38%;
 
 }
+.upload-file-text{
 
+    text-transform: uppercase;
+    color: rgb(79, 83, 79);
+    margin: 50px 0px;
+
+
+}
+/*------------------------CUBE ---------------------*/
+
+
+.wrap {
+    margin-top: 30px;
+    perspective: 400px;
+    perspective-origin: 50% 50px;
+
+}
 
 .cube {
     position: relative;
@@ -104,8 +116,13 @@ body{
     to { transform: rotateY(360deg); }
 }
 
-.cube {
-    animation: spin 5s infinite linear;
+.cube{
+    animation: spin 5s infinite linear paused;
+    cursor: pointer;
+
+}
+.cube:hover {
+    animation: spin 5s infinite linear running;
 }
 
 
