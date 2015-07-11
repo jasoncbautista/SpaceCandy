@@ -40,8 +40,76 @@ body{
 }
 
 
+/*------------------------CUBE ---------------------*/
 
 
+.wrap {
+    perspective: 400px;
+    perspective-origin: 50% 50px;
+    position: absolute;
+    top: 80px;
+    left: 90px;
+}
+
+
+.cube {
+    position: relative;
+    width: 100px;
+    transform-style: preserve-3d;
+}
+
+
+
+.cube div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: cyan;
+    opacity: 0.95;
+}
+
+
+/* FACES */
+
+
+.back {
+    transform: translateZ(-50px) rotateY(180deg);
+}
+.right {
+    transform: rotateY(-270deg) translateX(50px);
+    transform-origin: top right;
+}
+.left {
+    transform: rotateY(270deg) translateX(-50px);
+    transform-origin: center left;
+}
+.top {
+    transform: rotateX(-90deg) translateY(-50px);
+    transform-origin: top center;
+}
+.bottom {
+    transform: rotateX(90deg) translateY(50px);
+    transform-origin: bottom center;
+}
+.front {
+    transform: translateZ(50px);
+}
+
+
+@keyframes spin {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+.cube {
+    animation: spin 5s infinite linear;
+}
+
+
+
+
+
+/*------------------------CUBE ---------------------*/
 /*------------------------SUBMIT BUTTON---------------------*/
 
 .submit-button {
@@ -54,10 +122,24 @@ body{
     margin-right: 10px;
     border-radius: 5px;
     cursor: pointer;
-
+    opacity: 0;
+    animation: simple-fade 1.5s ease  0.5s 1 forwards;
 }
 .submit-button:hover{
     background: #C7EAC7;
+
+}
+
+
+@keyframes simple-fade{
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+    }
 
 }
 
