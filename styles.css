@@ -46,9 +46,11 @@ body{
 .wrap {
     perspective: 400px;
     perspective-origin: 50% 50px;
-    position: absolute;
-    top: 80px;
-    left: 90px;
+    top: 30%;
+    margin: 0px auto;
+    position: relative;
+    left: 38%;
+
 }
 
 
@@ -61,11 +63,12 @@ body{
 
 
 .cube div {
+    border: 2px solid white;
     position: absolute;
     width: 100px;
     height: 100px;
     background: cyan;
-    opacity: 0.95;
+    opacity: 0.40;
 }
 
 
